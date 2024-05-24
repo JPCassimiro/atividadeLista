@@ -25,7 +25,7 @@ list.addEventListener('click', function (ev) {
 
 function addElemento() {
     let li = document.createElement("li");
-    let inputValue = document.getElementById("tarefa").value;
+    let inputValue = document.getElementById("tarefa").value.toUpperCase();
     let t = document.createTextNode(inputValue);
     li.appendChild(t);
     if (inputValue === '') {
