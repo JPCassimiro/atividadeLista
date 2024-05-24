@@ -13,6 +13,7 @@ for (let i = 0; i < close.length; i++) {
     close[i].onclick = function () {
         let div = this.parentElement;
         div.style.display = "none";
+        verifica();
     }
 }
 
@@ -45,10 +46,30 @@ function addElemento() {
             div.style.display = "none";
         }
     }
+    verifica();
+
 }
 
 function limparLista(){
     let lista = document.getElementById("itemLista");
-    console.log(lista.innerHTML);
-    lista.innerHTML = '';
+    if(lista.innerHTML.length != true){
+        console.log(lista.innerHTML.length)
+        lista.innerHTML = '';
+        console.log("limpou");
+    }
+    verifica();
+}
+
+function verifica(){
+    console.log("verificação inicio")
+
+    let lista = document.getElementById("itemLista");
+    let botao = document.getElementById("botaoLimpar")
+    if(lista.innerHTML.length == 5 || lista.innerHTML.length == 0){
+        botao.style.cursor = "not-allowed"
+        botao.style.opacity = "0.6"
+    }else{
+        botao.style.opacity = "1"
+        botao.style.cursor = "pointer"
+    }
 }

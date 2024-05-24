@@ -73,7 +73,7 @@ input {
     padding: 10px;
     width: 25%;
     background: #d9d9d9;
-    color: #555;
+    color: #353535;
     float: left;
     text-align: center;
     font-size: 16px;
@@ -83,11 +83,27 @@ input {
 }
 
 .addBtn:hover {
-    background-color: #bbb;
+    background-color: rgb(198, 170, 224);
 }
 
 #botaoLimpar{
     float: right;
-    margin-right: 25px;
+    margin-right: 45px;
     margin-top: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+    width: 23%;
+    box-shadow: none;
+    background:#d9d9d9;
+    text-align: center;
+    font-size: 16px;
+    color: #353535;
+    padding: 20px;
+    cursor = "not-allowed"
+    opacity = "0.6"
 }
+
+#botaoLimpar:hover{
+    background-color: rgb(198, 170, 224);
+}
+
