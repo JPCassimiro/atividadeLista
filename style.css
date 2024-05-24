@@ -85,3 +85,9 @@ input {
 .addBtn:hover {
     background-color: #bbb;
 }
+
+#botaoLimpar{
+    float: right;
+    margin-right: 25px;
+    margin-top: 10px;
+}

@@ -46,3 +46,9 @@ function addElemento() {
         }
     }
 }
+
+function limparLista(){
+    let lista = document.getElementById("itemLista");
+    console.log(lista.innerHTML);
+    lista.innerHTML = '';
+}
