@@ -1,6 +1,9 @@
 body {
     margin: 0;
     min-width: 250px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 100px;
+    background-color: #fbe8e6;
 }
 
 * {
@@ -10,26 +13,35 @@ body {
 ul {
     margin: 0;
     padding: 0;
+    list-style: none;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 ul li {
     cursor: pointer;
     position: relative;
     padding: 12px 8px 12px 40px;
-    background: #eee;
+    background: #fcd8af;
     font-size: 18px;
+    box-shadow: inset;
 }
 
 ul li:nth-child(odd) {
-    background: #f9f9f9;
+    background: #fec49b;
 }
 
 ul li:hover {
-    background: #ddd;
+    background: #f7e6da;
 }
 
 ul li.checked {
-    background: #888;
+    background: #ba8b56;
+    color: #fff;
+    text-decoration: line-through;
+}
+
+ul li.checked:nth-child(odd) {
+    background: #c3733a;
     color: #fff;
     text-decoration: line-through;
 }
@@ -42,15 +54,19 @@ ul li.checked {
 }
 
 .close:hover {
-    background-color: blueviolet;
+    background-color: #fd6084;
     color: white;
 }
 
 .header {
-    background-color: blueviolet;
+    background-color: #045071;
     padding: 30px 40px;
     color: white;
     text-align: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    box-shadow: inset;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 .header:after {
@@ -83,7 +99,8 @@ input {
 }
 
 .addBtn:hover {
-    background-color: rgb(198, 170, 224);
+    background-color: #fd6084;
+    color: black;
 }
 
 #botaoLimpar{
@@ -99,9 +116,19 @@ input {
     font-size: 16px;
     color: #353535;
     padding: 20px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 #botaoLimpar:hover{
-    background-color: rgb(198, 170, 224);
+    background-color: #fd6084;
+    color: black;
 }
 
+h2{
+    transition: 0.3s;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h2:hover{
+    color: #000000;
+}
