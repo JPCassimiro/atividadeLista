@@ -8,7 +8,7 @@ let myNodelist = document.getElementsByTagName("li");
 
 for (let i = 0; i < myNodelist.length; i++) {
     let span = document.createElement("span");
-    let txt = document.createTextNode("\u00D7"); //caracter x
+    let txt = document.createTextNode("\u2612"); //caracter x
     span.className = "close";
     span.appendChild(txt);
     myNodelist[i].appendChild(span);
@@ -23,18 +23,22 @@ list.addEventListener('click', function (ev) {
 
 function addElemento() {
     let li = document.createElement("li");
-    let inputValue = document.getElementById("tarefa").value.toUpperCase();
-    let t = document.createTextNode(inputValue);
+    let textoTarefa = document.getElementById("tarefa").value.toUpperCase();
+    let categoriaTarefa = document.getElementById("categoria").value.toUpperCase();
+    let t = document.createTextNode(textoTarefa);
+    let t2 = document.createTextNode(" \u268A " + categoriaTarefa);
     li.appendChild(t);
-    if (inputValue === "") {
-        alert("Você precisa descrever a tarefa");
+    li.appendChild(t2);
+    if (textoTarefa === "" || categoriaTarefa === "") {
+        alert("Você precisa descrever a tarefa e categoria");
     } else {
         document.getElementById("itemLista").appendChild(li);
         verifica();
     }
     document.getElementById("tarefa").value = "";
+    document.getElementById("categoria").value = "";
     let span = document.createElement("SPAN");
-    let txt = document.createTextNode("\u00D7");
+    let txt = document.createTextNode("\u2612");
     span.className = "close";
     span.appendChild(txt);
     li.appendChild(span);
@@ -46,6 +50,7 @@ function addElemento() {
             verifica();
         };
     }
+    //let edit = document.getElementsByClassName("edit")
 }
 
 function limparLista() {
